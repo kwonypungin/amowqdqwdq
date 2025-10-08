@@ -1,0 +1,9 @@
+/* Minimal dark theme for a polished look */
+QWidget { background-color: #1e1e1e; color: #d0d0d0; }
+QMenuBar, QMenu, QStatusBar { background-color: #232323; }
+QToolBar { background-color: #262626; spacing: 6px; }
+QPushButton { background-color: #2e2e2e; border: 1px solid #3a3a3a; padding: 6px 10px; }
+QPushButton:hover { background-color: #3a3a3a; }
+QLineEdit { background-color: #2a2a2a; border: 1px solid #3a3a3a; padding: 4px; }
+QDialog { background-color: #202020; }
+
