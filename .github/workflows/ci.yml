@@ -17,13 +17,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install system dependencies
+      - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libssl-dev libcurl4-openssl-dev
+          sudo apt-get install -y libssl-dev libcurl4-openssl-dev \
+            qt6-base-dev qt6-tools-dev qt6-charts-dev qt6-connectivity-dev \
+            qt6-websockets-dev
 
       - name: Configure CMake
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_QT_UI=OFF
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_QT_UI=ON
 
       - name: Build
         run: cmake --build build --config Release
